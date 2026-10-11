@@ -1,0 +1,1223 @@
+[
+  {
+    "id": "mc-01",
+    "type": "multiple-choice",
+    "topic": "Multimedia production processes",
+    "subtopic": "Production workflow",
+    "difficulty": "Foundation",
+    "text": "What is the main purpose of a storyboard before filming?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "To plan shot sequence, framing and timing",
+        "explanation": "A storyboard communicates the intended sequence visually before production."
+      },
+      {
+        "id": "B",
+        "text": "To colour grade the finished video",
+        "explanation": "Colour grading occurs during post-production."
+      },
+      {
+        "id": "C",
+        "text": "To replace all location risk assessments",
+        "explanation": "Safety requires a separate assessment of actual hazards."
+      },
+      {
+        "id": "D",
+        "text": "To calculate final file compression",
+        "explanation": "Compression is an export decision, not the main purpose of a storyboard."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "A storyboard communicates the intended sequence visually before production.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "To plan shot sequence, framing and timing",
+    "vocabulary": ["Storyboard", "pre-production", "shot list"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original"
+  },
+  {
+    "id": "mc-02",
+    "type": "multiple-choice",
+    "topic": "Hardware and software",
+    "subtopic": "Storage",
+    "difficulty": "Foundation",
+    "text": "Which upgrade most directly improves the transfer speed of large video files on a computer with a slow hard drive?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "A higher-resolution monitor",
+        "explanation": "Resolution improves viewing, not disk transfer."
+      },
+      {
+        "id": "B",
+        "text": "A solid-state drive with a suitable interface",
+        "explanation": "An SSD generally provides higher throughput and lower access latency than a mechanical hard drive."
+      },
+      {
+        "id": "C",
+        "text": "A larger mouse pad",
+        "explanation": "A mouse pad does not change storage speed."
+      },
+      {
+        "id": "D",
+        "text": "A graphics tablet",
+        "explanation": "A tablet is an input device, not storage."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "An SSD generally provides higher throughput and lower access latency than a mechanical hard drive.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "A solid-state drive with a suitable interface",
+    "vocabulary": ["SSD", "throughput", "latency"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original"
+  },
+  {
+    "id": "mc-03",
+    "type": "multiple-choice",
+    "topic": "Formats, compression and file management",
+    "subtopic": "Compression",
+    "difficulty": "Foundation",
+    "text": "Which statement correctly describes lossy compression?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "It always preserves every original sample",
+        "explanation": "Lossless compression preserves original information."
+      },
+      {
+        "id": "B",
+        "text": "It makes all file types equally small",
+        "explanation": "Size depends on the content and encoding settings."
+      },
+      {
+        "id": "C",
+        "text": "It discards some information to reduce file size",
+        "explanation": "Lossy encoding discards information, often information less noticeable to people."
+      },
+      {
+        "id": "D",
+        "text": "It can be reversed to reconstruct every discarded detail",
+        "explanation": "Discarded information cannot generally be recovered exactly."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Lossy encoding discards information, often information less noticeable to people.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "It discards some information to reduce file size",
+    "vocabulary": ["Lossy", "lossless", "artefact"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original",
+    "syllabusReference": "Industrial Technology Stage 6 Syllabus (2013): Industry Related Manufacturing Technology \u2014 HSC Multimedia: Video compression; Audio file compression"
+  },
+  {
+    "id": "mc-04",
+    "type": "multiple-choice",
+    "topic": "Video, audio, animation and graphics",
+    "subtopic": "Audio sampling",
+    "difficulty": "Foundation",
+    "text": "What does an audio sample rate of 48 kHz mean?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "48,000 measurements of the signal each second",
+        "explanation": "Sample rate counts measurements per second."
+      },
+      {
+        "id": "B",
+        "text": "48,000 different volume levels",
+        "explanation": "Bit depth determines the available amplitude levels."
+      },
+      {
+        "id": "C",
+        "text": "A guaranteed bitrate of 48 kb/s",
+        "explanation": "Bitrate also depends on bit depth, channels and encoding."
+      },
+      {
+        "id": "D",
+        "text": "A recording length of 48 seconds",
+        "explanation": "Sample rate is independent of recording duration."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Sample rate counts measurements per second.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "48,000 measurements of the signal each second",
+    "vocabulary": ["Sample rate", "bit depth", "bitrate"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original",
+    "syllabusReference": "Industrial Technology Stage 6 Syllabus (2013): Industry Related Manufacturing Technology \u2014 HSC Multimedia: Audio sampling"
+  },
+  {
+    "id": "mc-05",
+    "type": "multiple-choice",
+    "topic": "Multimedia design principles",
+    "subtopic": "Visual hierarchy",
+    "difficulty": "Foundation",
+    "text": "Which design choice most clearly establishes a visual hierarchy on a revision website?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "Using equal size and weight for all text",
+        "explanation": "Equal emphasis makes priorities harder to identify."
+      },
+      {
+        "id": "B",
+        "text": "Using a prominent heading and consistent subheadings",
+        "explanation": "Size, weight and spacing guide readers through levels of importance."
+      },
+      {
+        "id": "C",
+        "text": "Putting every element in a different colour",
+        "explanation": "Uncontrolled colour introduces competing emphasis."
+      },
+      {
+        "id": "D",
+        "text": "Removing all space between sections",
+        "explanation": "Spacing helps readers perceive groups and sections."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Size, weight and spacing guide readers through levels of importance.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "Using a prominent heading and consistent subheadings",
+    "vocabulary": ["Hierarchy", "contrast", "whitespace"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original"
+  },
+  {
+    "id": "mc-06",
+    "type": "multiple-choice",
+    "topic": "Project planning and management",
+    "subtopic": "Scheduling",
+    "difficulty": "Developing",
+    "text": "A task on the critical path is delayed by two days. With no schedule changes, what is the likely effect?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "The budget must double",
+        "explanation": "A delay does not imply a doubled budget."
+      },
+      {
+        "id": "B",
+        "text": "Only tasks with float are delayed",
+        "explanation": "Critical tasks have no scheduling float in the calculated schedule."
+      },
+      {
+        "id": "C",
+        "text": "The project completion date is delayed by two days",
+        "explanation": "A critical-path delay directly delays completion unless time is recovered."
+      },
+      {
+        "id": "D",
+        "text": "The delay has no effect on completion",
+        "explanation": "Without float or corrective action the finish date changes."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "A critical-path delay directly delays completion unless time is recovered.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "The project completion date is delayed by two days",
+    "vocabulary": ["Critical path", "dependency", "float"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original"
+  },
+  {
+    "id": "mc-07",
+    "type": "multiple-choice",
+    "topic": "Communication and presentation",
+    "subtopic": "Presentation",
+    "difficulty": "Developing",
+    "text": "Which approach best supports a client presentation of an interactive prototype?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "Read source code aloud without showing the interface",
+        "explanation": "Source code alone does not communicate the user experience."
+      },
+      {
+        "id": "B",
+        "text": "Use unexplained technical abbreviations throughout",
+        "explanation": "Unexplained jargon reduces clarity for a non-technical audience."
+      },
+      {
+        "id": "C",
+        "text": "Show only the final slide",
+        "explanation": "A final slide cannot demonstrate interaction."
+      },
+      {
+        "id": "D",
+        "text": "Demonstrate a typical user journey and relate it to the brief",
+        "explanation": "A user journey makes functionality and design decisions concrete."
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "A user journey makes functionality and design decisions concrete.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "Demonstrate a typical user journey and relate it to the brief",
+    "vocabulary": ["Prototype", "audience", "brief"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original"
+  },
+  {
+    "id": "mc-08",
+    "type": "multiple-choice",
+    "topic": "Industry study and workplace practices",
+    "subtopic": "Copyright",
+    "difficulty": "Developing",
+    "text": "A producer wants to use a commercially released song in a public promotional video. What should they do first?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "Assume credit alone grants permission",
+        "explanation": "Attribution does not grant a licence."
+      },
+      {
+        "id": "B",
+        "text": "Check and obtain the necessary licences for the composition and recording",
+        "explanation": "The composition and the sound recording can have different rights holders and permission requirements."
+      },
+      {
+        "id": "C",
+        "text": "Use it because the video is under one minute",
+        "explanation": "There is no general one-minute exemption."
+      },
+      {
+        "id": "D",
+        "text": "Remove the artist name to avoid copyright",
+        "explanation": "Removing attribution does not remove copyright."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The composition and the sound recording can have different rights holders and permission requirements.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "Check and obtain the necessary licences for the composition and recording",
+    "vocabulary": ["Copyright", "synchronisation licence", "rights holder"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original"
+  },
+  {
+    "id": "mc-09",
+    "type": "multiple-choice",
+    "topic": "Work health and safety",
+    "subtopic": "Ergonomics",
+    "difficulty": "Developing",
+    "text": "Which control best addresses neck strain during long editing sessions?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "Raise the screen to an appropriate viewing height and take regular breaks",
+        "explanation": "Workstation adjustment and breaks reduce awkward posture and sustained loading."
+      },
+      {
+        "id": "B",
+        "text": "Turn up the headphone volume",
+        "explanation": "Volume is unrelated to neck posture and can introduce hearing risk."
+      },
+      {
+        "id": "C",
+        "text": "Use a darker export preset",
+        "explanation": "Export settings do not address an ergonomic hazard."
+      },
+      {
+        "id": "D",
+        "text": "Disable automatic backups",
+        "explanation": "Backups address data loss, not neck strain."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Workstation adjustment and breaks reduce awkward posture and sustained loading.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "Raise the screen to an appropriate viewing height and take regular breaks",
+    "vocabulary": ["Ergonomics", "hazard", "control"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original"
+  },
+  {
+    "id": "mc-10",
+    "type": "multiple-choice",
+    "topic": "Quality control and evaluation",
+    "subtopic": "Testing",
+    "difficulty": "Developing",
+    "text": "Which test best checks whether exported captions work for the intended audience?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "Confirm that a caption file exists",
+        "explanation": "Existence does not demonstrate that captions display correctly."
+      },
+      {
+        "id": "B",
+        "text": "Count the number of timeline clips",
+        "explanation": "Clip count does not validate captions."
+      },
+      {
+        "id": "C",
+        "text": "Play the delivery file and check caption timing, accuracy and readability",
+        "explanation": "Testing the actual delivery file checks the experience the audience receives."
+      },
+      {
+        "id": "D",
+        "text": "Check only the project file name",
+        "explanation": "A name check cannot reveal missing or mistimed captions."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Testing the actual delivery file checks the experience the audience receives.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "Play the delivery file and check caption timing, accuracy and readability",
+    "vocabulary": ["Quality assurance", "captions", "delivery file"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original"
+  },
+  {
+    "id": "mc-11",
+    "type": "multiple-choice",
+    "topic": "Formats, compression and file management",
+    "subtopic": "Raster and vector",
+    "difficulty": "Developing",
+    "text": "Which format is most suitable for a logo that must scale to very large sizes without pixelation?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "A small JPEG",
+        "explanation": "A small raster image loses apparent quality when enlarged."
+      },
+      {
+        "id": "B",
+        "text": "SVG",
+        "explanation": "SVG describes vector shapes that can be scaled without a fixed pixel grid."
+      },
+      {
+        "id": "C",
+        "text": "A low-resolution BMP",
+        "explanation": "A low-resolution bitmap has a fixed pixel grid."
+      },
+      {
+        "id": "D",
+        "text": "An MP3",
+        "explanation": "MP3 is an audio format."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "SVG describes vector shapes that can be scaled without a fixed pixel grid.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "SVG",
+    "vocabulary": ["Vector", "raster", "resolution"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original",
+    "syllabusReference": "Industrial Technology Stage 6 Syllabus (2013): Industry Related Manufacturing Technology \u2014 HSC Multimedia: Graphics, vector and bitmap"
+  },
+  {
+    "id": "mc-12",
+    "type": "multiple-choice",
+    "topic": "Video, audio, animation and graphics",
+    "subtopic": "Video encoding",
+    "difficulty": "Developing",
+    "text": "What is the distinction between a video codec and a container?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "Both always mean the same thing",
+        "explanation": "A container and codec perform distinct roles."
+      },
+      {
+        "id": "B",
+        "text": "A container determines the camera lens",
+        "explanation": "Camera optics are unrelated to a file container."
+      },
+      {
+        "id": "C",
+        "text": "A codec specifies the screen size only",
+        "explanation": "A codec governs encoding and decoding, not only dimensions."
+      },
+      {
+        "id": "D",
+        "text": "A codec encodes media; a container packages streams and metadata",
+        "explanation": "For example, H.264 video and AAC audio may be packaged in an MP4 container."
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "For example, H.264 video and AAC audio may be packaged in an MP4 container.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "A codec encodes media; a container packages streams and metadata",
+    "vocabulary": ["Codec", "container", "metadata"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original",
+    "syllabusReference": "Industrial Technology Stage 6 Syllabus (2013): Industry Related Manufacturing Technology \u2014 HSC Multimedia: Video file types and compression"
+  },
+  {
+    "id": "mc-13",
+    "type": "multiple-choice",
+    "topic": "Multimedia production processes",
+    "subtopic": "Non-destructive editing",
+    "difficulty": "Developing",
+    "text": "What is a benefit of non-destructive editing?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "It preserves source media while storing editing decisions separately",
+        "explanation": "Preserving originals allows edits to be revised without permanently changing source media."
+      },
+      {
+        "id": "B",
+        "text": "It removes the need for storage",
+        "explanation": "Source files and project files still require storage."
+      },
+      {
+        "id": "C",
+        "text": "It guarantees every export has identical quality",
+        "explanation": "Export quality depends on settings and source material."
+      },
+      {
+        "id": "D",
+        "text": "It makes copyright permission unnecessary",
+        "explanation": "Editing method does not change usage rights."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Preserving originals allows edits to be revised without permanently changing source media.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "It preserves source media while storing editing decisions separately",
+    "vocabulary": ["Source media", "timeline", "non-destructive"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original"
+  },
+  {
+    "id": "mc-14",
+    "type": "multiple-choice",
+    "topic": "Video, audio, animation and graphics",
+    "subtopic": "Animation",
+    "difficulty": "Developing",
+    "text": "In keyframe animation, what does interpolation do?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "Deletes all intermediate frames",
+        "explanation": "Interpolation generates intermediate values rather than deleting them."
+      },
+      {
+        "id": "B",
+        "text": "Compresses the soundtrack",
+        "explanation": "Audio compression is a separate process."
+      },
+      {
+        "id": "C",
+        "text": "Calculates values between defined keyframes",
+        "explanation": "Software uses the keyframe values and interpolation curves to calculate motion between them."
+      },
+      {
+        "id": "D",
+        "text": "Changes copyright ownership",
+        "explanation": "Technical processing does not change copyright."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Software uses the keyframe values and interpolation curves to calculate motion between them.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "Calculates values between defined keyframes",
+    "vocabulary": ["Keyframe", "interpolation", "easing"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original",
+    "syllabusReference": "Industrial Technology Stage 6 Syllabus (2013): Industry Related Manufacturing Technology \u2014 HSC Multimedia: Animation, morphing and tweening"
+  },
+  {
+    "id": "mc-15",
+    "type": "multiple-choice",
+    "topic": "Quality control and evaluation",
+    "subtopic": "Backups",
+    "difficulty": "Developing",
+    "text": "Which backup arrangement best reduces the risk of losing an entire project?",
+    "marks": 1,
+    "options": [
+      {
+        "id": "A",
+        "text": "Store all copies on the same laptop drive",
+        "explanation": "One device failure can destroy all copies on that device."
+      },
+      {
+        "id": "B",
+        "text": "Keep independent copies on different media, including an off-site copy",
+        "explanation": "Independent copies and an off-site copy reduce shared failure risks; restoration should also be tested."
+      },
+      {
+        "id": "C",
+        "text": "Rename the only project file every day",
+        "explanation": "Renaming does not create a recoverable copy."
+      },
+      {
+        "id": "D",
+        "text": "Rely only on undo history",
+        "explanation": "Undo history is not an independent backup."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Independent copies and an off-site copy reduce shared failure risks; restoration should also be tested.",
+    "criteria": [
+      {
+        "marks": "1",
+        "description": "Select the correct option."
+      },
+      {
+        "marks": "0",
+        "description": "Select another option or leave unanswered."
+      }
+    ],
+    "modelAnswer": "Keep independent copies on different media, including an off-site copy",
+    "vocabulary": ["Backup", "redundancy", "restoration"],
+    "tip": "Identify what the question asks, then eliminate options that describe a different process.",
+    "source": "Original"
+  },
+  {
+    "id": "sa-01",
+    "type": "short-answer",
+    "topic": "Multimedia production processes",
+    "subtopic": "Production stages",
+    "difficulty": "Developing",
+    "text": "Outline one activity in each of pre-production, production and post-production for a school promotional video.",
+    "marks": 3,
+    "explanation": "Credit accurate alternatives that answer the question; the exemplar is one possible response.",
+    "criteria": [
+      {
+        "marks": "3",
+        "description": "Addresses all expected points accurately: Identify a suitable pre-production activity and its purpose. Identify a suitable production activity and its purpose. Identify a suitable post-production activity and its purpose."
+      },
+      {
+        "marks": "1\u20132",
+        "description": "Award one mark per accurately addressed point: Identify a suitable pre-production activity and its purpose. Identify a suitable production activity and its purpose. Identify a suitable post-production activity and its purpose."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "In pre-production, prepare a storyboard to plan the sequence and obtain approvals. During production, record the planned footage and clear dialogue using suitable camera and microphone settings. In post-production, edit the sequence, balance audio and export a tested delivery file.",
+    "vocabulary": ["Storyboard", "production", "post-production"],
+    "tip": "Use a technical detail, explain its effect, and relate it to the scenario. Assess the response against each expected point.",
+    "source": "Original"
+  },
+  {
+    "id": "sa-02",
+    "type": "short-answer",
+    "topic": "Hardware and software",
+    "subtopic": "Workstation selection",
+    "difficulty": "Developing",
+    "text": "Explain three hardware considerations when selecting a workstation for editing high-resolution video.",
+    "marks": 3,
+    "explanation": "Credit accurate alternatives that answer the question; the exemplar is one possible response.",
+    "criteria": [
+      {
+        "marks": "3",
+        "description": "Addresses all expected points accurately: Explain one relevant component linked to editing performance. Explain a second component linked to the workload. Explain a third component, recognising software and format requirements."
+      },
+      {
+        "marks": "1\u20132",
+        "description": "Award one mark per accurately addressed point: Explain one relevant component linked to editing performance. Explain a second component linked to the workload. Explain a third component, recognising software and format requirements."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "Choose a capable CPU for decoding and rendering supported codecs. Provide sufficient RAM for the editing application and active media so the system does not rely excessively on disk swapping. Use fast storage with sufficient capacity and throughput for source footage, cache and exports. A supported GPU can also accelerate some effects and encoding, depending on the software.",
+    "vocabulary": ["CPU", "RAM", "throughput"],
+    "tip": "Use a technical detail, explain its effect, and relate it to the scenario. Assess the response against each expected point.",
+    "source": "Original"
+  },
+  {
+    "id": "sa-03",
+    "type": "short-answer",
+    "topic": "Formats, compression and file management",
+    "subtopic": "Uncompressed audio size",
+    "difficulty": "Developing",
+    "text": "Calculate the size in bytes of 10 seconds of uncompressed stereo audio recorded at 48,000 samples per second and 16 bits per sample. Ignore headers. Show your working.",
+    "marks": 3,
+    "explanation": "Credit accurate alternatives that answer the question; the exemplar is one possible response.",
+    "criteria": [
+      {
+        "marks": "3",
+        "description": "Addresses all expected points accurately: Use sample rate \u00d7 bit depth \u00d7 channels \u00d7 duration. Substitute 48,000 \u00d7 16 \u00d7 2 \u00d7 10 correctly. Convert to 1,920,000 bytes with the correct unit."
+      },
+      {
+        "marks": "1\u20132",
+        "description": "Award one mark per accurately addressed point: Use sample rate \u00d7 bit depth \u00d7 channels \u00d7 duration. Substitute 48,000 \u00d7 16 \u00d7 2 \u00d7 10 correctly. Convert to 1,920,000 bytes with the correct unit."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "48,000 \u00d7 16 \u00d7 2 \u00d7 10 = 15,360,000 bits. Divide by 8 to convert bits to bytes: 1,920,000 bytes (1.92 MB using decimal units). There are two channels because the recording is stereo.",
+    "vocabulary": ["Sample rate", "stereo", "byte"],
+    "tip": "Use a technical detail, explain its effect, and relate it to the scenario. Assess the response against each expected point.",
+    "source": "Original",
+    "syllabusReference": "Industrial Technology Stage 6 Syllabus (2013): Industry Related Manufacturing Technology \u2014 HSC Multimedia: Audio sampling and relationship to file size"
+  },
+  {
+    "id": "sa-04",
+    "type": "short-answer",
+    "topic": "Video, audio, animation and graphics",
+    "subtopic": "Audio quality",
+    "difficulty": "Developing",
+    "text": "Explain two ways to improve intelligibility when recording an interview in a noisy location.",
+    "marks": 2,
+    "explanation": "Credit accurate alternatives that answer the question; the exemplar is one possible response.",
+    "criteria": [
+      {
+        "marks": "2",
+        "description": "Addresses all expected points accurately: Explain microphone placement linked to signal-to-noise ratio. Explain another suitable measure linked to clearer speech."
+      },
+      {
+        "marks": "1\u20131",
+        "description": "Award one mark per accurately addressed point: Explain microphone placement linked to signal-to-noise ratio. Explain another suitable measure linked to clearer speech."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "Position a suitable microphone close to the speaker so their voice is stronger relative to background noise. Move to a quieter location or reduce controllable noise before recording; this avoids relying on processing that may damage speech. Monitor with headphones to identify problems while they can still be corrected.",
+    "vocabulary": ["Signal-to-noise ratio", "monitoring"],
+    "tip": "Use a technical detail, explain its effect, and relate it to the scenario. Assess the response against each expected point.",
+    "source": "Original"
+  },
+  {
+    "id": "sa-05",
+    "type": "short-answer",
+    "topic": "Multimedia design principles",
+    "subtopic": "Accessibility",
+    "difficulty": "Developing",
+    "text": "Explain two design changes that make an interactive multimedia presentation more accessible. Link each change to a user need.",
+    "marks": 4,
+    "explanation": "Credit accurate alternatives that answer the question; the exemplar is one possible response.",
+    "criteria": [
+      {
+        "marks": "4",
+        "description": "Addresses all expected points accurately: Identify a relevant accessibility change. Link that change to a specific access need. Identify a second relevant change. Link the second change to a specific access need."
+      },
+      {
+        "marks": "1\u20133",
+        "description": "Award one mark per accurately addressed point: Identify a relevant accessibility change. Link that change to a specific access need. Identify a second relevant change. Link the second change to a specific access need."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "Provide accurate synchronised captions and a transcript for narration so people who cannot hear the audio can access the information. Provide keyboard-operable controls with visible focus and descriptive labels so users who cannot use a mouse can navigate and activate every interaction. Test these features with the actual delivery format.",
+    "vocabulary": ["Captions", "keyboard navigation", "focus"],
+    "tip": "Use a technical detail, explain its effect, and relate it to the scenario. Assess the response against each expected point.",
+    "source": "Original"
+  },
+  {
+    "id": "sa-06",
+    "type": "short-answer",
+    "topic": "Project planning and management",
+    "subtopic": "Project management",
+    "difficulty": "Developing",
+    "text": "Explain how a Gantt chart can help manage a multimedia project and identify one limitation.",
+    "marks": 3,
+    "explanation": "Credit accurate alternatives that answer the question; the exemplar is one possible response.",
+    "criteria": [
+      {
+        "marks": "3",
+        "description": "Addresses all expected points accurately: Explain scheduling or milestones. Explain dependencies or monitoring linked to project work. Explain a realistic limitation."
+      },
+      {
+        "marks": "1\u20132",
+        "description": "Award one mark per accurately addressed point: Explain scheduling or milestones. Explain dependencies or monitoring linked to project work. Explain a realistic limitation."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "A Gantt chart displays tasks against time so the team can plan milestones and see overlaps. Recording dependencies helps sequence work such as completing filming before editing those shots. It must be updated with actual progress: an outdated chart can conceal a delay, and it does not itself resolve resource shortages or guarantee completion.",
+    "vocabulary": ["Gantt chart", "milestone", "dependency"],
+    "tip": "Use a technical detail, explain its effect, and relate it to the scenario. Assess the response against each expected point.",
+    "source": "Original"
+  },
+  {
+    "id": "sa-07",
+    "type": "short-answer",
+    "topic": "Communication and presentation",
+    "subtopic": "Communicating a brief",
+    "difficulty": "Developing",
+    "text": "Describe two pieces of information a multimedia producer should clarify with a client before developing a prototype.",
+    "marks": 2,
+    "explanation": "Credit accurate alternatives that answer the question; the exemplar is one possible response.",
+    "criteria": [
+      {
+        "marks": "2",
+        "description": "Addresses all expected points accurately: Describe audience or purpose information and its relevance. Describe a distinct requirement or constraint and its relevance."
+      },
+      {
+        "marks": "1\u20131",
+        "description": "Award one mark per accurately addressed point: Describe audience or purpose information and its relevance. Describe a distinct requirement or constraint and its relevance."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "Clarify the target audience and intended purpose so content and interaction match users\u2019 needs. Confirm delivery requirements such as platform, dimensions, accessibility and file size so the prototype can be developed within realistic constraints.",
+    "vocabulary": ["Brief", "audience", "constraint"],
+    "tip": "Use a technical detail, explain its effect, and relate it to the scenario. Assess the response against each expected point.",
+    "source": "Original"
+  },
+  {
+    "id": "sa-08",
+    "type": "short-answer",
+    "topic": "Industry study and workplace practices",
+    "subtopic": "Industry practice",
+    "difficulty": "Developing",
+    "text": "Explain two impacts of outsourcing parts of a multimedia production project on a small business.",
+    "marks": 4,
+    "explanation": "Credit accurate alternatives that answer the question; the exemplar is one possible response.",
+    "criteria": [
+      {
+        "marks": "4",
+        "description": "Addresses all expected points accurately: Identify access to skills or another valid impact. Explain the effect on business operations. Identify a second distinct impact. Explain that impact with a relevant trade-off."
+      },
+      {
+        "marks": "1\u20133",
+        "description": "Award one mark per accurately addressed point: Identify access to skills or another valid impact. Explain the effect on business operations. Identify a second distinct impact. Explain that impact with a relevant trade-off."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "Outsourcing can provide specialist skills such as 3D animation without purchasing all equipment or employing a permanent specialist. However, the business must specify deliverables, rights and deadlines and allow time for review, because coordination failures can cause rework and delays. Costs may become more flexible but should include supervision and revision costs.",
+    "vocabulary": ["Outsourcing", "deliverable", "quality control"],
+    "tip": "Use a technical detail, explain its effect, and relate it to the scenario. Assess the response against each expected point.",
+    "source": "Original"
+  },
+  {
+    "id": "sa-09",
+    "type": "short-answer",
+    "topic": "Work health and safety",
+    "subtopic": "Risk controls",
+    "difficulty": "Developing",
+    "text": "A multimedia filming location has power leads crossing a walkway. (a) Identify the hazard and one possible injury (1 mark). (b) Describe how the production team should control and monitor this risk (2 marks).",
+    "marks": 3,
+    "explanation": "Credit accurate alternatives that answer the question; the exemplar is one possible response.",
+    "criteria": [
+      {
+        "marks": "3",
+        "description": "(a) Identifies the trip hazard and plausible injury (1). (b) Describes a practical control using the hierarchy of controls (1) and monitoring or review (1)."
+      },
+      {
+        "marks": "1\u20132",
+        "description": "Award one mark for each accurately addressed point above; naming a control without describing its application is insufficient for that point."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "Identify the leads as a trip hazard and assess who could be harmed. Eliminate the crossing by relocating equipment or routing leads away from the walkway where possible. If elimination is not feasible, use suitable cable covers and barriers, inspect the setup and keep access clear. Review the control during filming; a warning alone is a weaker measure.",
+    "vocabulary": ["Hazard", "risk", "hierarchy of controls"],
+    "tip": "Use a technical detail, explain its effect, and relate it to the scenario. Assess the response against each expected point.",
+    "source": "Original",
+    "syllabusReference": "Industrial Technology Stage 6 Syllabus (2013): Industry Related Manufacturing Technology \u2014 HSC Multimedia: WHS, risk identification and hazard reduction"
+  },
+  {
+    "id": "sa-10",
+    "type": "short-answer",
+    "topic": "Quality control and evaluation",
+    "subtopic": "Evaluation",
+    "difficulty": "Developing",
+    "text": "Explain how a producer could evaluate whether a finished multimedia product meets its brief.",
+    "marks": 3,
+    "explanation": "Credit accurate alternatives that answer the question; the exemplar is one possible response.",
+    "criteria": [
+      {
+        "marks": "3",
+        "description": "Addresses all expected points accurately: Connect evaluation criteria to the brief. Explain testing or audience feedback that provides evidence. Explain documenting improvements and retesting."
+      },
+      {
+        "marks": "1\u20132",
+        "description": "Award one mark per accurately addressed point: Connect evaluation criteria to the brief. Explain testing or audience feedback that provides evidence. Explain documenting improvements and retesting."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "Turn the brief into measurable acceptance criteria, such as target duration, readable text and supported playback devices. Test the exported product against those criteria and use representative audience feedback to assess usability. Record results, fix identified issues and retest rather than assuming an export is automatically successful.",
+    "vocabulary": ["Acceptance criteria", "usability", "evaluation"],
+    "tip": "Use a technical detail, explain its effect, and relate it to the scenario. Assess the response against each expected point.",
+    "source": "Original"
+  },
+  {
+    "id": "er-01",
+    "type": "extended-response",
+    "topic": "Industry study and workplace practices",
+    "subtopic": "Industry study",
+    "difficulty": "Challenge",
+    "text": "A small multimedia business is adopting cloud collaboration and new production technologies. (a) Explain how these changes affect its production operations, with relevant examples (6 marks). (b) Assess how the business can manage the impacts on employees and its ability to compete (9 marks). Relate both parts to the multimedia industry. Aim for approximately 600 words in total.",
+    "marks": 15,
+    "explanation": "This original exemplar illustrates a reasoned response, not the only correct answer. Support judgements with relevant examples.",
+    "criteria": [
+      {
+        "marks": "Part (a): 5\u20136",
+        "description": "Thorough explanation of operational changes with accurate multimedia examples and clear cause-and-effect links."
+      },
+      {
+        "marks": "Part (a): 3\u20134",
+        "description": "Sound explanation of some operational effects with relevant examples; limited detail or links."
+      },
+      {
+        "marks": "Part (a): 1\u20132",
+        "description": "Basic relevant statements about operational changes."
+      },
+      {
+        "marks": "Part (b): 7\u20139",
+        "description": "Sustained assessment of employee and competitive impacts; justified strategies, trade-offs and multimedia examples."
+      },
+      {
+        "marks": "Part (b): 4\u20136",
+        "description": "Sound discussion of both areas with some assessment and relevant strategies or examples."
+      },
+      {
+        "marks": "Part (b): 1\u20133",
+        "description": "Limited relevant statements; little assessment or application."
+      },
+      {
+        "marks": "Either part: 0",
+        "description": "No relevant accurate information for that part. Add the marks for parts (a) and (b) to select the total out of 15."
+      }
+    ],
+    "modelAnswer": "(a) Cloud collaboration changes how a multimedia business stores assets, coordinates production and gathers feedback. Instead of transferring separate project copies by removable drive, an editor can upload a review version and a client can leave time-coded comments. This can reduce misunderstandings and shorten approval cycles. Remote specialists may contribute animation or sound without travelling to the studio, widening the skills available for a project. However, the team needs shared naming conventions, permissions and an agreed process for approving versions; faster access does not prevent accidental use of an outdated asset.\n\nNew production technology can also change quality and throughput. For example, supported hardware acceleration can reduce the time required to render effects, while motion-capture tools can help generate character movement. These tools still require competent operators and review. The business must test compatibility with its existing software and delivery formats, rather than assuming a new tool will fit every client brief. Subscription fees, storage capacity and reliable connectivity affect operating costs. Large source files can take significant time to upload, so local working copies, tested backups and a continuity plan remain important. A small pilot project provides evidence about transfer times, revision cycles and output quality before the business changes its entire workflow.\n\n(b) The effect on employees depends on how the change is managed. Editors accustomed to local workflows may need training in shared asset management, secure access and remote communication. Allocating paid training time and support reduces errors and gives employees a realistic opportunity to develop skills. Specialist tools can create new roles, but they may also reduce demand for some routine tasks. Managers should consult staff, explain changing responsibilities and plan development opportunities rather than treating software adoption as a substitute for people.\n\nRemote collaboration can offer flexibility and access to specialists, yet it can weaken informal communication and blur work boundaries. Agreed availability, clear responsibilities and regular progress meetings help coordinate tasks across locations. Workloads and ergonomics should be reviewed so faster production does not simply create pressure for longer editing sessions. Access permissions should follow roles, and staff need procedures for protecting client material, licensed assets and personal information. Quality checks remain necessary when work is outsourced: the business is still responsible for delivering what it promised.\n\nCompetitive advantages may include shorter turnaround, more flexible staffing and the ability to offer services such as higher-quality animation. For example, a studio that can review edits with a client remotely may secure work outside its immediate region. These benefits should be judged against costs and market demand. Purchasing advanced tools for services few clients need can increase overheads without increasing revenue. Ongoing subscriptions, training and supervision must be included in pricing; a low initial purchase price does not represent the total cost of adoption.\n\nThe strongest approach is staged implementation linked to measurable goals. The business could compare project delivery times, revision counts, defect rates and profit margins before and after a trial. Staff feedback can reveal hidden coordination costs, while client feedback indicates whether the change improves the service they value. If results are poor, the studio can revise procedures or retain parts of its existing workflow. Overall, cloud collaboration and new production technology can strengthen competitiveness when investment, training and quality control are coordinated. They offer opportunities, but sustainable success depends on evidence that they improve both delivery and business viability, while supporting the employees who use them.",
+    "vocabulary": [
+      "Collaboration",
+      "training",
+      "competition",
+      "quality control"
+    ],
+    "tip": "Plan your argument, explain cause and effect, use multimedia examples and finish with a justified judgement. Select a mark within the best-fitting band.",
+    "planning": [
+      "Define the changes and the business context.",
+      "Analyse operational effects, costs and risks.",
+      "Discuss employee skills, roles and wellbeing.",
+      "Discuss competitive advantages and limitations.",
+      "Use examples and make a supported judgement."
+    ],
+    "source": "Original"
+  },
+  {
+    "id": "er-02",
+    "type": "extended-response",
+    "topic": "Multimedia production processes",
+    "subtopic": "Production workflow",
+    "difficulty": "Challenge",
+    "text": "Evaluate a production workflow for a two-minute promotional video delivered on mobile devices. Justify decisions from planning through final evaluation.",
+    "marks": 8,
+    "explanation": "This original exemplar illustrates a reasoned response, not the only correct answer. Support judgements with relevant examples.",
+    "criteria": [
+      {
+        "marks": "7\u20138",
+        "description": "Comprehensive, technically accurate analysis; sustained judgements linked to the scenario; well-integrated multimedia examples and clear structure."
+      },
+      {
+        "marks": "5\u20136",
+        "description": "Sound explanation of most issues; relevant examples and some justified evaluation; generally coherent structure."
+      },
+      {
+        "marks": "2\u20134",
+        "description": "Some accurate explanation; limited examples or evaluation; partially addresses the scenario."
+      },
+      {
+        "marks": "1\u20131",
+        "description": "Basic relevant statements with little development or application."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "Begin by clarifying the audience, message and mobile delivery requirements. Use a storyboard and shot list to make production efficient, and obtain location and media permissions. Schedule filming with time for contingencies. Record clear audio and consistent footage; check exposure, focus and sound on location so errors can be corrected. Preserve originals and edit a structured sequence with legible titles and captions. Export using a broadly supported codec and container, with dimensions and bitrate selected for quality and file size. A high bitrate alone will not repair poor source footage. Test the delivery file on representative phones and network conditions, check captions and readability, and compare the result with the brief and audience feedback. Revise and retest. This workflow balances creative quality with time, accessibility and delivery constraints.",
+    "vocabulary": ["Workflow", "bitrate", "delivery", "evaluation"],
+    "tip": "Plan your argument, explain cause and effect, use multimedia examples and finish with a justified judgement. Select a mark within the best-fitting band.",
+    "planning": [
+      "Identify purpose and delivery constraints.",
+      "Justify planning and production choices.",
+      "Explain post-production and export trade-offs.",
+      "Evaluate using evidence against the brief."
+    ],
+    "source": "Original"
+  },
+  {
+    "id": "er-03",
+    "type": "extended-response",
+    "topic": "Multimedia design principles",
+    "subtopic": "Interactive design",
+    "difficulty": "Challenge",
+    "text": "Evaluate design principles and accessibility strategies for an interactive museum display intended for visitors with varied abilities.",
+    "marks": 8,
+    "explanation": "This original exemplar illustrates a reasoned response, not the only correct answer. Support judgements with relevant examples.",
+    "criteria": [
+      {
+        "marks": "7\u20138",
+        "description": "Comprehensive, technically accurate analysis; sustained judgements linked to the scenario; well-integrated multimedia examples and clear structure."
+      },
+      {
+        "marks": "5\u20136",
+        "description": "Sound explanation of most issues; relevant examples and some justified evaluation; generally coherent structure."
+      },
+      {
+        "marks": "2\u20134",
+        "description": "Some accurate explanation; limited examples or evaluation; partially addresses the scenario."
+      },
+      {
+        "marks": "1\u20131",
+        "description": "Basic relevant statements with little development or application."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "Use a consistent visual hierarchy, concise language and predictable navigation so first-time visitors can identify the main choices quickly. Contrast and readable type help people in varied lighting; information should not be conveyed by colour alone. Large, well-spaced controls reduce accidental selection, while keyboard or equivalent accessible input must remain available. Caption audio and provide text alternatives for informative images. Avoid unnecessary timed interaction and give visitors a way to pause animation. Test a prototype with representative users and assistive technologies, recording task completion and difficulties. Revise based on evidence. Attractive animation can engage visitors, but should support the learning purpose rather than compete with instructions. An effective display combines aesthetic consistency with multiple ways to perceive and operate its content.",
+    "vocabulary": ["Hierarchy", "contrast", "accessibility", "usability"],
+    "tip": "Plan your argument, explain cause and effect, use multimedia examples and finish with a justified judgement. Select a mark within the best-fitting band.",
+    "planning": [
+      "Identify audience needs and purpose.",
+      "Explain relevant design principles.",
+      "Justify accessibility strategies.",
+      "Evaluate trade-offs and user testing."
+    ],
+    "source": "Original"
+  },
+  {
+    "id": "er-04",
+    "type": "extended-response",
+    "topic": "Project planning and management",
+    "subtopic": "Project planning",
+    "difficulty": "Challenge",
+    "text": "Discuss how project management strategies can help a multimedia team deliver a product on time while maintaining quality.",
+    "marks": 8,
+    "explanation": "This original exemplar illustrates a reasoned response, not the only correct answer. Support judgements with relevant examples.",
+    "criteria": [
+      {
+        "marks": "7\u20138",
+        "description": "Comprehensive, technically accurate analysis; sustained judgements linked to the scenario; well-integrated multimedia examples and clear structure."
+      },
+      {
+        "marks": "5\u20136",
+        "description": "Sound explanation of most issues; relevant examples and some justified evaluation; generally coherent structure."
+      },
+      {
+        "marks": "2\u20134",
+        "description": "Some accurate explanation; limited examples or evaluation; partially addresses the scenario."
+      },
+      {
+        "marks": "1\u20131",
+        "description": "Basic relevant statements with little development or application."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "Break the brief into tasks, assign responsibilities and estimate resources and durations. A schedule with dependencies identifies the critical path and supports meaningful milestones, such as prototype approval before final production. Reserve contingency for equipment failures and client changes. Maintain version and file management so team members can find approved assets. Regular progress reviews compare actual work with the schedule and identify bottlenecks early. If time is lost, adjust scope with the client or redistribute work where feasible instead of silently dropping required quality checks. Define acceptance criteria and plan review and testing time from the start. A schedule supports coordination but does not guarantee success; realistic estimates, clear communication and evidence-based adjustments are essential.",
+    "vocabulary": ["Scope", "critical path", "milestone", "contingency"],
+    "tip": "Plan your argument, explain cause and effect, use multimedia examples and finish with a justified judgement. Select a mark within the best-fitting band.",
+    "planning": [
+      "Plan tasks, resources and responsibilities.",
+      "Explain scheduling and dependencies.",
+      "Discuss communication and change management.",
+      "Connect quality assurance and realistic trade-offs to delivery."
+    ],
+    "source": "Original"
+  },
+  {
+    "id": "er-05",
+    "type": "extended-response",
+    "topic": "Industry study and workplace practices",
+    "subtopic": "Sustainable industry practice",
+    "difficulty": "Challenge",
+    "text": "Assess strategies a multimedia business could use to improve environmental sustainability while maintaining viable operations.",
+    "marks": 10,
+    "explanation": "This original exemplar illustrates a reasoned response, not the only correct answer. Support judgements with relevant examples.",
+    "criteria": [
+      {
+        "marks": "9\u201310",
+        "description": "Comprehensive, technically accurate analysis; sustained judgements linked to the scenario; well-integrated multimedia examples and clear structure."
+      },
+      {
+        "marks": "6\u20138",
+        "description": "Sound explanation of most issues; relevant examples and some justified evaluation; generally coherent structure."
+      },
+      {
+        "marks": "3\u20135",
+        "description": "Some accurate explanation; limited examples or evaluation; partially addresses the scenario."
+      },
+      {
+        "marks": "1\u20132",
+        "description": "Basic relevant statements with little development or application."
+      },
+      {
+        "marks": "0",
+        "description": "No relevant accurate information."
+      }
+    ],
+    "modelAnswer": "Audit energy use, purchasing and disposal to identify the business\u2019s main impacts. Power management and appropriately sized efficient equipment can reduce energy demand; measure consumption to check the benefit. Extend equipment life through maintenance and upgrades when performance still meets production needs, rather than replacing every device each year. Use responsible e-waste recycling and secure data removal. Remote review may reduce travel, but digital work also uses data centres and networks, so benefits should be evaluated rather than assumed. Plan storage retention to avoid unnecessary duplication while retaining essential backups and legal records. Purchasing decisions should consider durability, supplier practices and total cost of ownership. Staff training and measurable targets make changes part of normal operations. Some initiatives have an upfront cost; assess savings, reliability and client expectations over the equipment\u2019s useful life. A staged approach allows the business to improve sustainability without compromising safe work, quality or financial viability.",
+    "vocabulary": [
+      "Sustainability",
+      "e-waste",
+      "lifecycle",
+      "total cost of ownership"
+    ],
+    "tip": "Plan your argument, explain cause and effect, use multimedia examples and finish with a justified judgement. Select a mark within the best-fitting band.",
+    "planning": [
+      "Identify environmental impacts of multimedia operations.",
+      "Explain practical strategies with examples.",
+      "Assess costs, benefits and limitations.",
+      "Reach an evidence-based judgement and propose monitoring."
+    ],
+    "source": "Original"
+  }
+]
