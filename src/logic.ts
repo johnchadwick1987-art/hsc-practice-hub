@@ -1,7 +1,12 @@
 import raw from "./data/questions.json";
+import linked from "./data/past-paper-questions.json";
+import papers from "./data/past-papers.json";
 import { topics } from "./data/topics";
-import type { Question, Progress, Session, Attempt } from "./types";
-export const BANK = raw as Question[];
+import type { Question, Progress, Session, Attempt, PastPaper } from "./types";
+export const ORIGINAL_BANK = raw as Question[];
+export const PAST_PAPER_BANK = linked as Question[];
+export const PAST_PAPERS = papers as PastPaper[];
+export const BANK = [...ORIGINAL_BANK, ...PAST_PAPER_BANK];
 export const STORAGE_KEY = "hsc-multimedia-progress-v1";
 export const emptyProgress = (): Progress => ({
   version: 1,
@@ -18,15 +23,7 @@ export function validateQuestionBank(value: unknown): Question[] {
   const ids = new Set<string>();
   for (const q of value) {
     if (!obj(q)) throw Error("Each question must be an object.");
-    for (const key of [
-      "id",
-      "topic",
-      "subtopic",
-      "text",
-      "explanation",
-      "modelAnswer",
-      "tip",
-    ])
+    for (const key of ["id", "topic", "subtopic", "text", "explanation", "tip"])
       if (typeof q[key] !== "string" || !(q[key] as string).trim())
         throw Error(`Missing ${key}.`);
     if (ids.has(q.id as string)) throw Error(`Duplicate ID: ${q.id}`);
@@ -37,7 +34,9 @@ export function validateQuestionBank(value: unknown): Question[] {
       !["Foundation", "Developing", "Challenge"].includes(
         q.difficulty as string,
       ) ||
-      !["Original", "Verified past paper"].includes(q.source as string)
+      !["Original", "Verified past paper", "Linked past paper"].includes(
+        q.source as string,
+      )
     )
       throw Error("Use a supported difficulty and source.");
     if (
@@ -62,7 +61,10 @@ export function validateQuestionBank(value: unknown): Question[] {
       throw Error("Vocabulary and marking criteria are required.");
     if (q.planning !== undefined && !strings(q.planning))
       throw Error("Planning must be an array of text.");
-    if (q.source === "Verified past paper") {
+    if (
+      q.source === "Verified past paper" ||
+      q.source === "Linked past paper"
+    ) {
       if (
         !q.sourceYear ||
         !q.examSection ||
@@ -89,6 +91,49 @@ export function validateQuestionBank(value: unknown): Question[] {
         ].some((h) => url.hostname === h || url.hostname.endsWith("." + h))
       )
         throw Error("Use an official NSW/NESA HTTPS source URL.");
+    }
+    if (
+      typeof q.modelAnswer !== "string" ||
+      (q.source !== "Linked past paper" && !q.modelAnswer.trim())
+    )
+      throw Error("A model answer is required for published question text.");
+    if (q.source === "Linked past paper") {
+      if (typeof q.markingGuidelinesUrl !== "string")
+        throw Error("Linked questions require official marking guidelines.");
+      const url = new URL(q.markingGuidelinesUrl);
+      if (
+        url.protocol !== "https:" ||
+        url.hostname !== "www.nsw.gov.au" ||
+        url.username ||
+        url.password
+      )
+        throw Error("Use official NSW Government marking guidelines.");
+      for (const key of ["paperQuestion", "paperPage", "guidelinesPage"])
+        if (!Number.isInteger(q[key]) || (q[key] as number) < 1)
+          throw Error(
+            "Linked questions require a question number and verified PDF pages.",
+          );
+      if (
+        (q.paperQuestion as number) > 16 ||
+        !["I", "II", "III"].includes(q.examSection as string)
+      )
+        throw Error("Invalid linked question reference.");
+      if (
+        q.type === "multiple-choice" &&
+        (!((q.paperQuestion as number) <= 10) || q.marks !== 1)
+      )
+        throw Error("Invalid objective-response reference.");
+      if (
+        q.type === "short-answer" &&
+        (!((q.paperQuestion as number) >= 11) ||
+          !((q.paperQuestion as number) <= 15))
+      )
+        throw Error("Invalid short-answer reference.");
+      if (
+        q.type === "extended-response" &&
+        (q.paperQuestion !== 16 || q.marks !== 15)
+      )
+        throw Error("Invalid industry-study reference.");
     }
     if (
       q.sourceYear !== undefined &&
@@ -170,10 +215,14 @@ export const EXAM_IDS = [
 ]; // 10 + 15 + 15 = 40; six short-answer items including sa-09 parts (a)/(b).
 export function createSession(
   mode: Session["mode"],
-  pool: Question[] = BANK,
+  pool: Question[] = ORIGINAL_BANK,
 ): Session {
   const questionIds =
-    mode === "exam" ? [...EXAM_IDS] : shuffle(pool.map((q) => q.id));
+    mode === "exam"
+      ? [...EXAM_IDS]
+      : mode === "past-paper"
+        ? pool.map((q) => q.id)
+        : shuffle(pool.map((q) => q.id));
   if (!questionIds.length)
     throw Error("No questions available for this session.");
   return {
@@ -188,7 +237,11 @@ export function createSession(
     optionOrders: Object.fromEntries(
       questionIds.map((id) => [
         id,
-        shuffle(BANK.find((q) => q.id === id)?.options?.map((o) => o.id) || []),
+        BANK.find((q) => q.id === id)?.source === "Linked past paper"
+          ? BANK.find((q) => q.id === id)!.options?.map((o) => o.id) || []
+          : shuffle(
+              BANK.find((q) => q.id === id)?.options?.map((o) => o.id) || [],
+            ),
       ]),
     ),
     phase: mode === "exam" ? "reading" : "writing",
@@ -303,7 +356,9 @@ export function parseProgress(text: string): Progress {
       typeof s.id !== "string" ||
       !s.id ||
       sessionIds.has(s.id) ||
-      !["mixed", "topic", "incorrect", "exam"].includes(s.mode as string) ||
+      !["mixed", "topic", "incorrect", "exam", "past-paper"].includes(
+        s.mode as string,
+      ) ||
       !strings(s.questionIds) ||
       !s.questionIds.length ||
       new Set(s.questionIds).size !== s.questionIds.length ||

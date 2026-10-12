@@ -1,4 +1,4 @@
-# HSC Multimedia Practice Hub
+# Chadwick HSC Revision Website
 
 **Practise. Improve. Prepare for the HSC.**
 
@@ -8,6 +8,7 @@ A static revision website for Year 12 NSW HSC Industrial Technology – Multimed
 
 - Use the dashboard, mixed practice, ten topic categories and incorrect-answer review.
 - Practise **30 original questions**: 15 multiple choice, 10 short answer and 5 extended response.
+- Use **176 linked past-paper questions from 2015–2025**: open each official question, record your answer here and track your results. Multiple-choice keys and allocations are verified; written criteria remain in the linked official guide.
 - Read explanations for every option, model responses, marking criteria, terminology and revision tips.
 - Compare written responses side by side and select an honest **self-assessed** mark. Writing is never automatically marked.
 - Resume sessions, flag questions and practise a **40-mark exam** with 5 minutes reading and 90 minutes writing.
@@ -65,11 +66,12 @@ The Vite base is already `/hsc-practice-hub/`. If you rename the repository, upd
 
 Read [the teacher guide](docs/TEACHER_GUIDE.md) for step-by-step question editing, JSON fields, marking examples, topics, imports and copyright checks.
 
-- Published questions: `src/data/questions.json`.
+- Published original questions: `src/data/questions.json`.
+- Linked past-paper references and year catalogue: `src/data/past-paper-questions.json` and `src/data/past-papers.json`.
 - Editable topic categories: `src/data/topics.ts`.
 - Exam question selection: `EXAM_IDS` in `src/logic.ts`.
-- Content and scoring tests: `src/logic.test.ts`.
-- Browser workflow tests: `tests/app.spec.ts`.
+- Content, scoring and provenance tests: `src/logic.test.ts` and `src/past-papers.test.ts`.
+- Browser workflow tests: `tests/app.spec.ts` and `tests/past-papers.spec.ts`.
 
 Keep question IDs stable. Changing or removing IDs can invalidate old progress exports; plan a migration before such changes. Run the tests before every content update.
 
@@ -84,12 +86,13 @@ Checked **12 October 2026** against the official [Industrial Technology Stage 6 
 
 Our simulation uses 10 multiple-choice questions, five short-answer questions including a two-part item (six items total), and a two-part industry-study response. It has separate automatic marks out of 10 and self-assessed marks out of 30. No final result is shown until all six written responses have selected marks. Unanswered writing should be self-assessed at zero. It is a practice tool, not an official examination or secure assessment system.
 
-The bank is original, with no questions copied from a NESA paper. Revision categories include broader project-work skills; they do not imply every category is directly examined in the written paper. Broad syllabus references are included only where checked. This small bank is not exhaustive syllabus coverage. See [source and coverage notes](docs/SOURCES.md).
+The 30-question original bank contains no questions copied from a NESA paper. The separate linked collection provides references to all 176 numbered questions in the 11 Multimedia exam packs found in NESA’s current 2015–2025 index. It does not republish their wording, options, diagrams or written marking rubrics. See [linked paper verification and copyright notes](docs/PAST_PAPERS.md). Revision categories include broader project-work skills; they do not imply every category is directly examined in the written paper. Broad syllabus references are included only where checked. This small bank is not exhaustive syllabus coverage. See [source and coverage notes](docs/SOURCES.md).
 
 ## Privacy and limitations
 
 - Progress and theme are saved in the student's browser. Clearing browser data, using another profile/device or private browsing can remove progress. Export regularly; import **replaces** current progress.
 - Draft teacher questions are not persisted or published by the editor; export before leaving the page. Everyone can open it; there is no fake secure admin login.
+- Linked-paper practice needs internet access to the NSW Government PDFs and is untimed. The timed simulation continues to use original questions. A linked written card opens official marking guidelines; it does not display a copied or invented model response.
 - Written marking is self-assessment. Model answers are examples, and teachers should review content and criteria before formal classroom assessment.
 - The exam timer continues when the tab is closed and submits on the next visit if time has elapsed. The optional extended-response stopwatch is temporary and is not an exam clock.
 - Answer data ships with the static website and is inspectable. Exam mode hides feedback in the interface but cannot prevent technical access to answers or clock tampering. It is not suitable for high-stakes assessment.
@@ -99,4 +102,4 @@ The bank is original, with no questions copied from a NESA paper. Revision categ
 
 ## Validation
 
-Automated tests cover bank structure, every multiple-choice answer, unique/latest progress calculations, explicit written marks, import rejection, storage, 40-mark exam scoring and deadline transitions. Browser tests cover practice completion, reload persistence, exam submission and assessment, expired exams, export/import/reset, teacher export, mobile layout, keyboard focus and dark mode. These checks do not certify full accessibility compliance or replace teacher review.
+Automated tests cover all 11 linked papers, verified answer keys and allocations, source references, old/new progress compatibility, bank structure, every multiple-choice answer, unique/latest progress calculations, explicit written marks, import rejection, storage, 40-mark exam scoring and deadline transitions. Browser tests cover the new title and linked past-paper workflows, practice completion, reload persistence, exam submission and assessment, expired exams, export/import/reset, teacher export, mobile layout, keyboard focus and dark mode. These checks do not certify full accessibility compliance or replace teacher review.

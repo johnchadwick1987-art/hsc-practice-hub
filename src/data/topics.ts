@@ -9,4 +9,5 @@ export const topics = [
   "Industry study and workplace practices",
   "Work health and safety",
   "Quality control and evaluation",
+  "Past papers — Multimedia Technologies",
 ];

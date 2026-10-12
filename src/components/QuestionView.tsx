@@ -1,3 +1,4 @@
+import { ExternalLink, BookOpen } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
   CheckCircle2,
@@ -33,6 +34,7 @@ export default function QuestionView({
     const id = setInterval(() => setSeconds((s) => s + 1), 1000);
     return () => clearInterval(id);
   }, [timing]);
+  const linked = q.source === "Linked past paper";
   const response = session.answers[q.id] || "";
   const reading = exam && session.phase === "reading";
   const feedback = exam
@@ -57,6 +59,32 @@ export default function QuestionView({
           {q.topic} <span> / {q.subtopic}</span>
         </div>
         <h2>{q.text}</h2>
+        {linked && (
+          <section
+            className="official-question"
+            aria-label="Official question reference"
+          >
+            <p>
+              Read the question and its{" "}
+              {q.type === "multiple-choice" ? "answer options" : "parts"} in the
+              official paper, then record your response below. This card links
+              to the question; it does not reproduce it.
+            </p>
+            <a
+              className="button primary"
+              href={q.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BookOpen size={17} />
+              Open official question {q.paperQuestion}{" "}
+              <ExternalLink size={15} />
+            </a>
+            <small>
+              {q.sourceYear} · Section {q.examSection} · PDF page {q.paperPage}
+            </small>
+          </section>
+        )}
         {reading && (
           <p className="notice">
             Reading time: read and plan mentally. Answer controls unlock when
@@ -197,7 +225,11 @@ export default function QuestionView({
                 </p>
                 <p>{q.explanation}</p>
                 <details>
-                  <summary>Why each option does or doesn’t fit</summary>
+                  <summary>
+                    {linked
+                      ? "Check each option against the official key"
+                      : "Why each option does or doesn’t fit"}
+                  </summary>
                   {order.map((id, i) => {
                     const o = q.options!.find((o) => o.id === id)!;
                     return (
@@ -226,8 +258,38 @@ export default function QuestionView({
                     </p>
                   </div>
                   <div>
-                    <h4>Model response</h4>
-                    <p>{q.modelAnswer}</p>
+                    <h4>
+                      {linked
+                        ? "Official marking guidelines"
+                        : "Model response"}
+                    </h4>
+                    {linked ? (
+                      <>
+                        <p>
+                          Compare your answer with the criteria and indicative
+                          content for Question {q.paperQuestion} in the official
+                          guide. Written criteria and sample answers are not
+                          reproduced in this card.
+                        </p>
+                        <a
+                          className="button secondary"
+                          href={q.markingGuidelinesUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Open official marking guidelines{" "}
+                          <ExternalLink size={15} />
+                        </a>
+                        {q.paperQuestion === 16 && (
+                          <p>
+                            Assess each part separately, then add the marks to
+                            select your total out of 15.
+                          </p>
+                        )}
+                      </>
+                    ) : (
+                      <p>{q.modelAnswer}</p>
+                    )}
                   </div>
                 </div>
                 <p>{q.explanation}</p>
@@ -238,14 +300,25 @@ export default function QuestionView({
                 <strong>Syllabus reference:</strong> {q.syllabusReference}
               </p>
             )}
-            {q.source === "Verified past paper" && (
+            {(q.source === "Verified past paper" || linked) && (
               <p className="source-note">
                 <a href={q.sourceUrl} target="_blank" rel="noreferrer">
                   Verified source: {q.sourceYear} · {q.examSection}
                 </a>
               </p>
             )}
-            <h4>Marking guidance</h4>
+            {linked && q.type === "multiple-choice" && (
+              <p>
+                <a
+                  href={q.markingGuidelinesUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View official answer key <ExternalLink size={13} />
+                </a>
+              </p>
+            )}
+            <h4>{linked ? "How to record your mark" : "Marking guidance"}</h4>
             <div className="criteria">
               {q.criteria.map((c) => (
                 <div key={c.marks}>
@@ -320,7 +393,9 @@ export default function QuestionView({
         <small>
           {q.source === "Original"
             ? "Original practice content. Not an official NESA question or marking guide."
-            : "Verified past-paper question. See source attribution in the feedback."}
+            : q.source === "Linked past paper"
+              ? "Linked NESA question. Open the official PDF to read it; answer keys and mark allocations were verified."
+              : "Verified past-paper question. See source attribution in the feedback."}
         </small>
       </aside>
     </div>

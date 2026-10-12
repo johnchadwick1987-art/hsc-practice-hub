@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import {
   BANK,
+  ORIGINAL_BANK,
   createSession,
   statistics,
   emptyProgress,
@@ -41,6 +42,7 @@ import { topics } from "./data/topics";
 import type { Progress, Question, Session } from "./types";
 import QuestionView from "./components/QuestionView";
 import Teacher from "./components/Teacher";
+import PastPapers from "./components/PastPapers";
 type Page =
   | "dashboard"
   | "topics"
@@ -48,11 +50,13 @@ type Page =
   | "exam"
   | "progress"
   | "teacher"
-  | "about";
+  | "about"
+  | "past-papers";
 const nav = [
   { page: "dashboard", label: "Dashboard", icon: LayoutDashboard },
   { page: "topics", label: "Practice by topic", icon: Layers3 },
   { page: "exam", label: "Exam simulation", icon: ClipboardList },
+  { page: "past-papers", label: "Past HSC papers", icon: BookOpen },
   { page: "progress", label: "My progress", icon: BarChart3 },
   { page: "teacher", label: "Teacher workspace", icon: GraduationCap },
 ] as const;
@@ -160,7 +164,7 @@ export default function App() {
       ),
     }));
   }
-  function begin(mode: Session["mode"], pool: Question[] = BANK) {
+  function begin(mode: Session["mode"], pool: Question[] = ORIGINAL_BANK) {
     if (!pool.length) {
       setNotice("No questions to review yet. Try a practice session first.");
       return;
@@ -353,7 +357,7 @@ export default function App() {
             <BookOpen size={24} />
           </span>
           <span>
-            HSC MULTIMEDIA<small>PRACTICE HUB</small>
+            CHADWICK HSC<small>REVISION WEBSITE</small>
           </span>
         </a>
         <div className="nav-label">YOUR LEARNING SPACE</div>
@@ -413,7 +417,7 @@ export default function App() {
             <span className="course-label">
               YEAR 12 <span>/</span> INDUSTRIAL TECHNOLOGY
             </span>
-            <span className="course-mobile">HSC Multimedia</span>
+            <span className="course-mobile">Chadwick HSC Revision</span>
           </div>
           <div className="topbar-right">
             <span className="course-badge">Multimedia Technologies</span>
@@ -499,8 +503,8 @@ export default function App() {
                   </div>
                   <div className="hero-foot">
                     <ShieldCheck size={15} />
-                    Original HSC-style questions <span>·</span> Your progress
-                    stays private
+                    Original questions + linked past papers <span>·</span> Your
+                    progress stays private
                   </div>
                 </div>
                 <div className="hero-art" aria-hidden="true">
@@ -744,6 +748,24 @@ export default function App() {
               </div>
             </>
           )}
+          {page === "dashboard" && (
+            <section className="card past-paper-dashboard">
+              <div>
+                <span className="eyebrow">OFFICIAL PAST-PAPER PRACTICE</span>
+                <h2>Explore 11 years of HSC Multimedia papers.</h2>
+                <p>
+                  176 linked questions from 2015–2025. Open the official paper,
+                  answer here, and track your progress.
+                </p>
+              </div>
+              <button
+                className="button primary"
+                onClick={() => navigate("past-papers")}
+              >
+                Browse past papers <ArrowRight size={17} />
+              </button>
+            </section>
+          )}
           {page === "topics" && (
             <>
               <div className="page-heading">
@@ -755,33 +777,41 @@ export default function App() {
                 </p>
               </div>
               <div className="topic-grid">
-                {topics.map((t, i) => {
-                  const q = BANK.filter((q) => q.topic === t);
-                  const result = stats.byTopic.find((x) => x.topic === t)!;
-                  return (
-                    <button
-                      className="card topic-card"
-                      key={t}
-                      onClick={() => begin("topic", q)}
-                    >
-                      <span className="topic-number">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <h2>{t}</h2>
-                      <p>
-                        {q.length} questions ·{" "}
-                        {q.reduce((s, x) => s + x.marks, 0)} available marks
-                      </p>
-                      {meter(
-                        Math.round((result.count / q.length) * 100),
-                        `${t} completion`,
-                      )}
-                      <span className="path-link">
-                        Practise this topic <ArrowRight size={17} />
-                      </span>
-                    </button>
-                  );
-                })}
+                {topics
+                  .filter((t) => ORIGINAL_BANK.some((q) => q.topic === t))
+                  .map((t, i) => {
+                    const q = ORIGINAL_BANK.filter((q) => q.topic === t);
+                    const result = {
+                      count: q.filter((question) =>
+                        progress.attempts.some(
+                          (a) => a.questionId === question.id,
+                        ),
+                      ).length,
+                    };
+                    return (
+                      <button
+                        className="card topic-card"
+                        key={t}
+                        onClick={() => begin("topic", q)}
+                      >
+                        <span className="topic-number">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <h2>{t}</h2>
+                        <p>
+                          {q.length} questions ·{" "}
+                          {q.reduce((s, x) => s + x.marks, 0)} available marks
+                        </p>
+                        {meter(
+                          Math.round((result.count / q.length) * 100),
+                          `${t} completion`,
+                        )}
+                        <span className="path-link">
+                          Practise this topic <ArrowRight size={17} />
+                        </span>
+                      </button>
+                    );
+                  })}
               </div>
               <p className="muted">
                 Topics are editable teaching categories, not a claim of
@@ -868,11 +898,13 @@ export default function App() {
                 <div className="practice-heading">
                   <div>
                     <div className="eyebrow">
-                      {active.mode === "exam"
-                        ? "EXAM SIMULATION"
-                        : active.mode === "incorrect"
-                          ? "REVIEW & IMPROVE"
-                          : "PRACTICE SESSION"}
+                      {active.mode === "past-paper"
+                        ? "LINKED PAST-PAPER PRACTICE"
+                        : active.mode === "exam"
+                          ? "EXAM SIMULATION"
+                          : active.mode === "incorrect"
+                            ? "REVIEW & IMPROVE"
+                            : "PRACTICE SESSION"}
                     </div>
                     <h1>
                       {active.mode === "exam"
@@ -1101,11 +1133,13 @@ export default function App() {
                               <strong>
                                 {s.mode === "exam"
                                   ? "Exam simulation"
-                                  : s.mode === "topic"
-                                    ? "Topic practice"
-                                    : s.mode === "incorrect"
-                                      ? "Review practice"
-                                      : "Mixed practice"}
+                                  : s.mode === "past-paper"
+                                    ? "Past-paper practice"
+                                    : s.mode === "topic"
+                                      ? "Topic practice"
+                                      : s.mode === "incorrect"
+                                        ? "Review practice"
+                                        : "Mixed practice"}
                               </strong>
                               <small>
                                 {new Date(s.created).toLocaleString("en-AU")} ·{" "}
@@ -1201,6 +1235,12 @@ export default function App() {
             </>
           )}
           {page === "teacher" && <Teacher />}
+          {page === "past-papers" && (
+            <PastPapers
+              progress={progress}
+              practise={(pool) => begin("past-paper", pool)}
+            />
+          )}
           {page === "about" && (
             <>
               <div className="page-heading">
@@ -1214,9 +1254,10 @@ export default function App() {
               <section className="card guide">
                 <h2>What this hub does</h2>
                 <p>
-                  Practise 15 multiple-choice, 10 short-answer and 5
-                  extended-response questions. Multiple-choice answers are
-                  marked automatically. Written responses use model answers and
+                  Practise 15 original multiple-choice, 10 original short-answer
+                  and 5 original extended-response questions, plus 176 linked
+                  past-paper questions. Multiple-choice answers are marked
+                  automatically. Written responses use model answers and
                   transparent self-assessment, not keyword matching or AI
                   marking.
                 </p>
@@ -1224,12 +1265,14 @@ export default function App() {
                 <p>
                   The ten editable topic categories support revision; they do
                   not replace the official syllabus or guarantee complete exam
-                  coverage. The initial bank contains no copied past-paper
-                  questions. Coverage was checked against the Industrial
-                  Technology Stage 6 Syllabus (2013), including HSC Multimedia
-                  Technologies and Industry Study. The ten categories are
-                  configurable revision groupings; some questions also reinforce
-                  project-work skills.
+                  coverage. The original bank contains no copied past-paper
+                  questions. The linked collection provides 176 numbered
+                  questions from 2015–2025 through official PDF links, with
+                  verified answer keys and local progress. Coverage was checked
+                  against the Industrial Technology Stage 6 Syllabus (2013),
+                  including HSC Multimedia Technologies and Industry Study. The
+                  ten categories are configurable revision groupings; some
+                  questions also reinforce project-work skills.
                 </p>
                 <p>
                   The 40-mark simulation uses 5 minutes reading and 90 minutes
@@ -1292,8 +1335,11 @@ export default function App() {
             </>
           )}
           <footer className="footer">
-            <span>HSC Multimedia Practice Hub</span>
-            <span>Original practice material · Not affiliated with NESA</span>
+            <span>Chadwick HSC Revision Website</span>
+            <span>
+              Original practice + official paper links · Not affiliated with
+              NESA
+            </span>
           </footer>
         </main>
       </div>

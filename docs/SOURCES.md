@@ -1,6 +1,6 @@
 # Official sources and coverage notes
 
-Checked 12 October 2026 (Australia/Sydney). All published questions are original educational content. Official documents were consulted for alignment; their questions are not reproduced in the initial bank.
+Checked 12 October 2026 (Australia/Sydney). The original bank contains 30 original educational questions. The separate linked collection references 176 numbered past-paper questions without reproducing their wording. See [the linked-paper source and copyright record](PAST_PAPERS.md). Official documents were consulted for alignment and answer-key verification.
 
 1. [Industrial Technology Stage 6 Syllabus (2013)](https://www.nsw.gov.au/education-and-training/nesa/curriculum/tas/industrial-technology-stage-6-2013), including the downloadable syllabus DOCX at `/sites/default/files/noindex/2025-03/industrial-technology-st6-syl.docx`.
 2. [Assessment and reporting in Industrial Technology](https://www.nsw.gov.au/education-and-training/nesa/curriculum/tas/industrial-technology-stage-6-2013/assessment-and-reporting), HSC examination specifications, written paper.
@@ -19,3 +19,7 @@ Some questions use contemporary examples (SSD storage, cloud collaboration, acce
 ## Content review
 
 Mark bands are original practice guidance, not NESA-approved guidelines. Model responses illustrate an acceptable approach; credit relevant accurate alternatives. Teacher review is still appropriate before a formal classroom mock. No source year is assigned to any original question.
+
+## Linked collection
+
+All Multimedia exam packs linked from the current [Industrial Technology paper index](https://www.nsw.gov.au/education-and-training/nesa/curriculum/hsc-exam-papers/industrial-technology) were verified for 2015–2025. See `src/data/past-papers.json` for each year’s official sources, source-file fingerprints and verification date. The collection contains 110 objective, 55 short-answer and 11 structured extended-response references. These are source references with local answer recording; full paper wording and written guidelines remain external.

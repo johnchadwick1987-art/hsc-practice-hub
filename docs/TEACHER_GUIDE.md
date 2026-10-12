@@ -57,14 +57,16 @@ Find the question by its ID. Edit `text`, `modelAnswer`, `explanation`, `tip`, `
 
 Edit `src/data/topics.ts` to add a category, then use the exact same topic string in your questions. The categories are teacher-defined revision groupings. Check the official syllabus rather than treating them as syllabus headings.
 
-Optional `syllabusReference` should name the verified document and section precisely. Do not invent clause numbers. Optional `sourceYear` and `examSection` are for verified provenance, not guesses. Original questions should not be labelled as past-paper questions. The initial bank contains only original content.
+Optional `syllabusReference` should name the verified document and section precisely. Do not invent clause numbers. Optional `sourceYear` and `examSection` are for verified provenance, not guesses. Original questions should not be labelled as past-paper questions. The full-text bank in `questions.json` contains only original content. Separate `past-paper-questions.json` records provide linked question references without republishing their wording.
 
-## Importing past-paper questions later
+## Linked papers and authorised full-text imports
 
-There is no runtime student-bank upload. Deliberate publication is a repository edit:
+The existing linked collection covers verified 2015–2025 papers. Read [PAST_PAPERS.md](PAST_PAPERS.md) to maintain those records; no permission to republish entire papers is implied by linking them.
+
+There is no runtime student-bank upload. Importing actual question text requires documented publication rights and deliberate repository edits:
 
 1. Verify the official question text, year, paper, focus area, section, marks and guidelines.
-2. Check [NESA copyright information](https://www.nsw.gov.au/nsw-government/copyright) and the applicable publication permissions; do not assume a classroom-use permission permits public republication.
+2. Check [NESA copyright information](https://www.nsw.gov.au/education-and-training/nesa/copyright) and the applicable publication permissions; do not assume a classroom-use permission permits public republication.
 3. Use the same question schema. Set `source` to `Verified past paper`, provide `sourceYear`, `examSection`, `sourceUrl` (an official NSW/NESA source), and a checked `syllabusReference`. Retain attribution and record permission evidence in the repository documentation.
 4. Have a teacher review the answers and marking criteria. Validation cannot verify copyright or historical authenticity.
 5. Add only authorised, reviewed objects to `src/data/questions.json`, then test and publish.

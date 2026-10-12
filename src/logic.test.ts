@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 import {
   BANK,
+  ORIGINAL_BANK,
   EXAM_IDS,
   validateQuestionBank,
   markChoice,
@@ -29,14 +30,20 @@ function assessed() {
 }
 describe("published content", () => {
   it("has 30 unique original questions with the requested split and all ten topics", () => {
-    expect(validateQuestionBank(BANK)).toHaveLength(30);
-    expect(new Set(BANK.map((q) => q.topic)).size).toBe(10);
-    expect(BANK.filter((q) => q.type === "multiple-choice")).toHaveLength(15);
-    expect(BANK.filter((q) => q.type === "short-answer")).toHaveLength(10);
-    expect(BANK.filter((q) => q.type === "extended-response")).toHaveLength(5);
-    expect(BANK.every((q) => q.source === "Original" && !q.sourceYear)).toBe(
-      true,
+    expect(validateQuestionBank(ORIGINAL_BANK)).toHaveLength(30);
+    expect(new Set(ORIGINAL_BANK.map((q) => q.topic)).size).toBe(10);
+    expect(
+      ORIGINAL_BANK.filter((q) => q.type === "multiple-choice"),
+    ).toHaveLength(15);
+    expect(ORIGINAL_BANK.filter((q) => q.type === "short-answer")).toHaveLength(
+      10,
     );
+    expect(
+      ORIGINAL_BANK.filter((q) => q.type === "extended-response"),
+    ).toHaveLength(5);
+    expect(
+      ORIGINAL_BANK.every((q) => q.source === "Original" && !q.sourceYear),
+    ).toBe(true);
   });
   it("requires verified provenance for published past-paper imports", () => {
     const q = { ...BANK[0], source: "Verified past paper" };

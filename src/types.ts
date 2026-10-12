@@ -20,8 +20,12 @@ export interface Question {
   vocabulary: string[];
   tip: string;
   planning?: string[];
-  source: "Original" | "Verified past paper";
+  source: "Original" | "Verified past paper" | "Linked past paper";
   sourceUrl?: string;
+  markingGuidelinesUrl?: string;
+  paperQuestion?: number;
+  paperPage?: number;
+  guidelinesPage?: number;
   sourceYear?: number;
   examSection?: string;
   syllabusReference?: string;
@@ -38,7 +42,7 @@ export interface Attempt {
 }
 export interface Session {
   id: string;
-  mode: "mixed" | "topic" | "incorrect" | "exam";
+  mode: "mixed" | "topic" | "incorrect" | "exam" | "past-paper";
   questionIds: string[];
   index: number;
   answers: Record<string, string>;
@@ -64,4 +68,16 @@ export interface FeedbackProvider {
     question: Question,
     response: string,
   ): Promise<{ suggestions: string[]; estimatedMark?: number }>;
+}
+
+export interface PastPaper {
+  year: number;
+  packUrl: string;
+  paperUrl: string;
+  markingGuidelinesUrl: string;
+  paperSha256: string;
+  markingGuidelinesSha256: string;
+  verifiedOn: string;
+  questionIds: string[];
+  marks: number;
 }
